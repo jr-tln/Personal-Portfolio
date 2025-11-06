@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>John Raymond Junatas — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <header>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#techstack">TechStack</a>
+        <a href="#projects">Projects & Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-photo">
+          <img src="herro.png" alt="Portrait of John Raymond" />
+        </div>
+        <div class="hero-text">
+          <h1>Hello, I'm John Raymond</h1>
+          <h2>IT Graduate | Aspiring Full-Stack Developer</h2>
+          <div class="social-icons">
+            <a
+              href="https://github.com/jr-tln"
+              target="_blank"
+              aria-label="Github Profile"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jrtjunatas/"
+              target="_blank"
+              aria-label="LinkedIn Profile"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/jrtlnj"
+              target="_blank"
+              aria-label="Facebook Profile"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-header"><h2>About Me</h2></div>
+        <div class="about-text">
+          <p>
+            I'm an IT graduate with a strong passion for coding, technology
+            exploration, and problem-solving. I enjoy learning how different
+            systems work, whether it’s software, automation, or new tools that
+            can enhance productivity.
+          </p>
+          <br />
+          <p>
+            I'm continuously improving my skills by building personal projects,
+            trying out new technologies, and challenging myself to grow as a
+            developer every day. My goal is to become a well-rounded tech
+            professional who can create efficient, smart, and scalable
+            solutions.
+          </p>
+
+          <a class="btn" href="#" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="techstack" class="tech-stack">
+      <h2>Tech Stack</h2>
+      <div class="stack-grid">
+        <div class="tech-card active" id="github" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+          <div class="tech-caption">
+            <strong>GitHub</strong><br />
+            Managed multiple personal & team projects; version control and
+            collaboration.
+          </div>
+        </div>
+
+        <div class="tech-card" id="html" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML5" />
+          <div class="tech-caption">
+            <strong>HTML5</strong><br />
+            Structure and markup for web pages and web applications.
+          </div>
+        </div>
+
+        <div class="tech-card" id="css" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/css/ffffff" alt="CSS" />
+          <div class="tech-caption">
+            <strong>CSS3</strong><br />
+            Styling, responsive layouts, and subtle animations for web projects.
+          </div>
+        </div>
+
+        <div class="tech-card" id="js" onclick="activateCard(this)">
+          <img
+            src="https://cdn.simpleicons.org/javascript/ffffff"
+            alt="JavaScript"
+          />
+          <div class="tech-caption">
+            <strong>JavaScript</strong><br />
+            Added interactivity, dynamic content, and DOM manipulation.
+          </div>
+        </div>
+
+        <div class="tech-card" id="vercel" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel" />
+          <div class="tech-caption">
+            <strong>Vercel</strong><br />
+            Frontend deployment and hosting with CI/CD workflow.
+          </div>
+        </div>
+
+        <div class="tech-card" id="python" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+          <div class="tech-caption">
+            <strong>Python</strong><br />
+            Backend logic, automation scripts, and data processing.
+          </div>
+        </div>
+
+        <div class="tech-card" id="mysql" onclick="activateCard(this)">
+          <img src="https://cdn.simpleicons.org/mysql/ffffff" alt="MySQL" />
+          <div class="tech-caption">
+            <strong>MySQL</strong><br />
+            Database management for applications like Waste Management System.
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-bottom-nav">
+        <button onclick="scrollToCard('github')" id="btn-github">GitHub</button>
+        <button onclick="scrollToCard('html')" id="btn-html">HTML</button>
+        <button onclick="scrollToCard('css')" id="btn-css">CSS</button>
+        <button onclick="scrollToCard('js')" id="btn-js">JS</button>
+        <button onclick="scrollToCard('vercel')" id="btn-vercel">Vercel</button>
+        <button onclick="scrollToCard('python')" id="btn-python">Python</button>
+        <button onclick="scrollToCard('mysql')" id="btn-mysql">MySQL</button>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2>Projects & Achievements</h2>
+
+      <div class="projects-grid">
+        <div class="project-card featured">
+          <img src="project2-screenshot.png" alt="Portfolio Website" />
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>
+              Personal portfolio built using HTML, CSS, and JavaScript. Features
+              responsive design, tech stack carousel, and interactive sections.
+            </p>
+            <a
+              href="https://yourportfolio.com"
+              target="_blank"
+              class="view-project-btn"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="project1-screenshot.png" alt="Waste Management System" />
+          <div class="project-info">
+            <h3>Waste Management System</h3>
+            <p>
+              Built with Python and MySQL; full-stack solution for efficient
+              waste collection scheduling and tracking.
+            </p>
+            <a
+              href="https://jrtln.pythonanywhere.com/"
+              target="_blank"
+              class="view-project-btn"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="achievements">
+        <h3>Achievements</h3>
+        <div class="badge-grid">
+          <div class="badge-card">
+            <img src="magna-cum-laude.png" alt="Magna Cum Laude" />
+            <p>Magna Cum Laude - IT Graduate</p>
+          </div>
+
+          <div class="badge-card">
+            <img src="junior-dev-badge.png" alt="Junior Developer" />
+            <p>Junior Developer - Internship</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="suggestions-section">
+      <h2>Contact Me</h2>
+      <p class="suggestions-subtext">
+        Got feedback, ideas, or just want to say hi? Send me a suggestion and
+        I’ll check it out!
+      </p>
+
+      <form id="suggestionForm">
+        <input type="text" name="name" placeholder="Your Name (optional)" />
+        <textarea
+          name="suggestion"
+          placeholder="Your suggestion..."
+          required
+        ></textarea>
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+      <p id="statusMessage"></p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

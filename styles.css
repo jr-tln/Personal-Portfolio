@@ -1,0 +1,533 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body: pastel gradient you liked */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff;
+  color: #f1e9e9; /* darker text works on pastel background */
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  padding-top: 60px; /* adjust to match nav height */
+}
+
+/* Particles layer */
+#particles-js {
+  position: fixed;
+  inset: 0;            /* top:0;right:0;bottom:0;left:0; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;           /* full width */
+    z-index: 1000;
+    display: flex;
+    gap: 20px;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+  }
+  
+
+/* Nav links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+/* Active link styling */
+nav a.active {
+    color: #00bfff;           /* highlight color */
+    background: rgba(255,255,255,0.1); /* subtle background */
+  }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Text area */
+.hero-text {
+  max-width: 560px;
+}
+
+/* Headings */
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+.hero-text h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 14px;
+}
+.hero-text p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Photo (responsive) */
+.hero-photo img {
+  width: 100%;
+  max-width: 480px;  /* caps the image size on large screens */
+  height: auto;      /* preserves aspect ratio */
+  object-fit: cover;
+  border-radius: 12px; /* change to 0 for sharp rectangle */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  display: block;
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #ffffff; /* Change to black if light background */
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #00bfff; /* Accent color on hover */
+}
+
+/* ABOUT SECTION */
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #f1e9e9;
+}
+
+.about-content {
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05); /* subtle contrast panel */
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00bfff;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-text p {
+  margin-bottom: 18px;
+}
+
+/* DOWNLOAD BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 26px;
+  background: #00bfff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0096d1;
+  transform: scale(1.05);
+}
+/* Tech Stack Section */
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #f1e9e9;
+  }
+  
+  .tech-stack h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+  
+  /* Grid */
+  .stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Icon */
+  .tech-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Caption hidden by default */
+  .tech-caption {
+    display: none;  /* hide description initially */
+    margin-top: 12px;
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.4;
+    width: 220px;
+  }
+  
+  /* Selected card */
+  .tech-card.active {
+    transform: scale(1.2);
+  }
+  
+  .tech-card.active img {
+    transform: scale(1.25);
+  }
+  
+  .tech-card.active .tech-caption {
+    display: block; /* show description */
+  }
+  
+  /* Bottom nav */
+  .tech-bottom-nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .tech-bottom-nav button {
+    background: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .tech-bottom-nav button:hover {
+    transform: scale(1.1);
+    background: #0095cc;
+  }
+  
+  .tech-bottom-nav button.active {
+    background: #ffffff;
+    color: #00bfff;
+    font-weight: bold;
+  }
+  .projects-section {
+    text-align: center;
+    padding: 80px 20px;
+    color: #f1e9e9;
+    min-height: 100vh;
+  }
+  
+  .projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 15px;
+    text-align: center; /* center text and buttons */
+  }
+  
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .project-info p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  
+  /* View Project Button */
+  .view-project-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #00bfff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .view-project-btn:hover {
+    background: #0095cc;
+    transform: scale(1.05);
+  }
+  
+  /* Featured Project Styling */
+  .project-card.featured {
+    width: 320px;
+    border: 2px solid #00bfff;
+  }
+  
+  /* Achievements / Badges */
+  .achievements {
+    margin-top: 60px;
+  }
+  
+  .achievements h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .badge-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+  
+  .badge-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .badge-card p {
+    font-size: 0.95rem;
+  }
+  
+  .suggestions-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #f1e9e9;
+    text-align: center;
+  }
+  
+  .suggestions-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+  
+  .suggestions-subtext {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  .suggestion-icon {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  #suggestionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  #suggestionForm input,
+  #suggestionForm textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+  
+  #suggestionForm textarea {
+    min-height: 120px;
+  }
+  
+  #suggestionForm button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #00bfff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  #suggestionForm button:hover {
+    transform: scale(1.05);
+    background: #0095cc;
+  }
+  
+  #statusMessage {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #00ffbf; /* Success color */
+  }
+
+  #submitBtn:disabled {
+    background-color: #888; /* gray */
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding-top: 80px; /* give space under nav */
+  }
+  nav { justify-content: space-around; }
+  .hero-text h1 { font-size: 1.6rem; }
+  /* lower particles count on mobile handled in JS */
+
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 70vw;
+    height: auto;
+  }
+  .tech-bottom-nav {
+    gap: 8px;
+    margin-top: 20px;
+    overflow-x: auto; /* scroll if too many buttons */
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .tech-bottom-nav button {
+    flex: 0 0 auto; /* don't shrink, allow horizontal scroll */
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Optional: hide scroll bar for cleaner look */
+  .tech-bottom-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .tech-bottom-nav {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .projects-grid, .badge-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
