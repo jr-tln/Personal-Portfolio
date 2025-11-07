@@ -83,11 +83,11 @@ function initParticles(count = 60) {
       }
     });
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
+    navLinkItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinksContainer.classList.remove("active");
+        menuToggle.classList.remove("active");
+      });
     });
   });
 
@@ -184,3 +184,25 @@ function initParticles(count = 60) {
       modal.style.display = 'none';
     }
   });
+
+// Hamburger toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinksContainer = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinksContainer.classList.toggle("active");
+  menuToggle.classList.toggle("active"); // optional for icon change
+});
+
+// Close mobile menu when a link is clicked
+const navLinkItems = document.querySelectorAll("nav a");
+
+navLinkItems.forEach(link => {
+  link.addEventListener("click", () => {
+    // Only close if menu is open (for mobile)
+    if (navLinksContainer.classList.contains("active")) {
+      navLinksContainer.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+});
