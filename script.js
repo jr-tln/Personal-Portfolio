@@ -158,3 +158,29 @@ function initParticles(count = 60) {
       submitBtn.textContent = "Submit";
     }
   });
+
+
+  const modal = document.getElementById('badgeModal');
+  const modalImg = document.getElementById('modalImg');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const closeBtn = document.querySelector('.close');
+
+  document.querySelectorAll('.badge-card').forEach(card => {
+    card.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = card.dataset.img;
+      modalTitle.textContent = card.dataset.title;
+      modalDesc.textContent = card.dataset.desc;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });

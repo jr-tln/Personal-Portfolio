@@ -203,18 +203,49 @@
           </div>
         </div>
       </div>
+
       <div class="achievements">
         <h3>Achievements</h3>
         <div class="badge-grid">
-          <div class="badge-card">
-            <img src="magna-cum-laude.png" alt="Magna Cum Laude" />
-            <p>Magna Cum Laude - IT Graduate</p>
+          <div
+            class="badge-card"
+            data-img="magna-cum-laude.jpg"
+            data-desc="Graduated with honors - Bachelor of Science in Information Technology."
+          >
+            <img src="magna-cum-laude.jpg" alt="Magna Cum Laude" />
+            <p>Magna Cum Laude - BSIT Graduate</p>
           </div>
 
-          <div class="badge-card">
-            <img src="junior-dev-badge.png" alt="Junior Developer" />
-            <p>Junior Developer - Internship</p>
+          <div
+            class="badge-card"
+            data-img="junior-dev-badge.jpg"
+            data-desc="Awarded for excellence in programming and teamwork."
+          >
+            <img
+              src="junior-dev-badge.jpg"
+              alt="Junior Programmer of the Year"
+            />
+            <p>Junior Programmer of the Year</p>
           </div>
+
+          <div
+            class="badge-card"
+            data-img="best-capstone.jpg"
+            data-desc="Recognized for Best Capstone Project Engagement: Waste Management System."
+          >
+            <img src="best-capstone.jpg" alt="Best Capstone Project" />
+            <p>Best Capstone Project Engagement</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="badgeModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modalImg" src="" alt="Badge" />
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
         </div>
       </div>
     </section>
